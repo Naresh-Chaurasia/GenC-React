@@ -1,0 +1,45 @@
+= genc-my-app-1x
+:toc: right
+:toclevels:5
+:sectnums:
+
+== Project Structure
+
+== Files and Folders
+
+*package.json*
+
+Defines project metadata, dependencies, scripts, and configuration for npm.
+
+*node_modules*
+
+Contains all the npm packages installed for the project. This folder is automatically generated and should not be
+
+*public*
+
+Static files served directly by the web server.
+
+- `index.html`: Main HTML template for the React app.
+- `favicon.ico`, `logo192.png`, `logo512.png`: Icons for the app.
+- `manifest.json`: Web app manifest for PWA support.
+- `robots.txt`: Instructions for web crawlers.
+
+*src*
+
+Source code for the React application.
+
+- `App.js`: Main React component.
+- `App.css`: Styles for the `App` component.
+- `App.test.js`: Test file for the `App` component.
+- `index.js`: Entry point for the React app, renders `App` into the DOM.
+- `index.css`: Global styles.
+- `logo.svg`: Logo used in the app.
+- `reportWebVitals.js`: Measures and reports web vitals for performance monitoring.
+- `setupTests.js`: Configures the testing environment.
+
+== Scripts
+
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner.
+- `npm run build`: Builds the app for production.
+- `npm run eject`: Ejects the app from Create React App configuration.

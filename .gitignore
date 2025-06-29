@@ -1,0 +1,34 @@
+# Ignore node_modules in any subdirectory
+**/node_modules/
+
+# Ignore build folders in any subdirectory
+**/build/
+
+# Ignore environment files
+**/.env
+**/.env.*.local
+
+# Ignore log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore editor folders
+.vscode/
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Coverage and test output
+**/coverage/
+
+# Cache folders (e.g., Parcel, Next.js)
+.cache/
+.next/
+dist/
+
+# Optional lock files
+*.lock
+
