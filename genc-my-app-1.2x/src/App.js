@@ -5,9 +5,9 @@ import TodoRowItem2 from "./components/TodoRowItem2";
 
 function App() {
   const todos = [
-    { rowNumber: 1, rowDescription: "Feed Dog", rowAssigned: "NC" },
-    { rowNumber: 2, rowDescription: "Feed Dog2", rowAssigned: "NC2" },
-    { rowNumber: 3, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
+    { rowNumber: 11, rowDescription: "Feed Dog", rowAssigned: "NC" },
+    { rowNumber: 21, rowDescription: "Feed Dog2", rowAssigned: "NC2" },
+    { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
   ];
 
   return (
@@ -40,6 +40,18 @@ function App() {
                 rowNumber={todos[0].rowNumber}
                 rowDescription={todos[0].rowDescription}
                 rowAssigned={todos[0].rowAssigned}
+              />
+
+              <TodoRowItem2
+                rowNumber={todos[1].rowNumber}
+                rowDescription={todos[1].rowDescription}
+                rowAssigned={todos[1].rowAssigned}
+              />
+
+              <TodoRowItem2
+                rowNumber={todos[2].rowNumber}
+                rowDescription={todos[2].rowDescription}
+                rowAssigned={todos[2].rowAssigned}
               />
             </tbody>
           </table>
