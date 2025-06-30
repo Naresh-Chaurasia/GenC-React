@@ -3,6 +3,7 @@ import "./App.css";
 import TodoRowItem1 from "./components/TodoRowItem1";
 import TodoRowItem2 from "./components/TodoRowItem2";
 import TodoTable from "./components/TodoTable";
+import TodoTable2 from "./components/TodoTable2";
 
 function App() {
   const todos = [
@@ -17,6 +18,7 @@ function App() {
         <div className="card-header">TODO 1.3x</div>
         <div className="card-body">
           <TodoTable todos={todos} />
+          {/* <TodoTable2 todos={todos} /> */}
         </div>
       </div>
     </div>
