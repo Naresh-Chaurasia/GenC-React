@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import TodoTable2 from "./components/TodoTable2";
+import TodoFormOnChange1 from "./components/TodoFormOnChange1";
 
 function App() {
   // Declare a state variable 'todos' and a function 'setTodos' to update it
@@ -39,6 +40,7 @@ function App() {
           <button className="btn btn-primary" onClick={handleAddTodo}>
             Add New Todo
           </button>
+          <TodoFormOnChange1 />
         </div>
       </div>
     </div>
