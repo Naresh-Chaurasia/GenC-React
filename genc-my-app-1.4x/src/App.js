@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import TodoTable2 from "./components/TodoTable2";
 import TodoFormOnChange1 from "./components/TodoFormOnChange1";
+import TodoFormState2 from "./components/TodoFormState2";
+import TodoFormStateSubmit3 from "./components/TodoFormStateSubmit3";
 
 function App() {
   // Declare a state variable 'todos' and a function 'setTodos' to update it
@@ -20,9 +22,9 @@ function App() {
     console.log("Updated Todos:", todos);
   }, [todos]);
 
-  const handleAddTodo = () => {
+  const addTodo = (description, assigned) => {
     const newTodo = {
-      rowNumber: todos.length > 0 ? todos[todos.length - 1].rowNumber + 10 : 1,
+      rowNumber: todos.length + 1,
       rowDescription: "New Task",
       rowAssigned: "Someone",
     };
@@ -34,13 +36,25 @@ function App() {
   return (
     <div className="mt-5 container">
       <div className="card">
-        <div className="card-header">TODO 1.3x</div>
+        <div className="card-header">TODO TodoFormStateButton3 Page</div>
         <div className="card-body">
           <TodoTable2 todos={todos} />
-          <button className="btn btn-primary" onClick={handleAddTodo}>
+          {/* 1.4x-Step 1 Adding Buttons. It adds static row to the list of items */}
+          {/* <button className="btn btn-primary" onClick={addTodo}>
             Add New Todo
-          </button>
-          <TodoFormOnChange1 />
+          </button> */}
+          {/* ######################################### */}
+
+          {/* 1.4x-Step 2 Adding Form. What ever is typed in text box, it is displayed in console. */}
+          {/* <TodoFormOnChange1 setTodos={setTodos} /> */}
+          {/* ######################################### */}
+
+          {/* 1.4x-Step 3 Adding Form with State. What ever is typed in text box, it is displayed in console and also stored in state variable. */}
+          {/* <TodoFormState2 /> */}
+          {/* ######################################### */}
+
+          {/* 1.4x-Step 4 Adding Form with State. What ever is typed in text box, it is displayed in console and also stored in state variable. */}
+          <TodoFormStateSubmit3 addTodo={addTodo} />
         </div>
       </div>
     </div>

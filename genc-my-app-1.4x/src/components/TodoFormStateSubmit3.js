@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TodoFormState2() {
+function TodoFormStateSubmit3(props) {
   // State for assigned and description fields
   const [assigned, setAssigned] = useState("");
   const [description, setDescription] = useState("");
@@ -15,6 +15,14 @@ function TodoFormState2() {
   const onAssignedChange = (event) => {
     setAssigned(event.target.value); // Update state
     console.log("Assigned typed:", event.target.value); // Display the value typed
+  };
+
+  const submitTodo = () => {
+    if (description !== "" && assigned !== "") {
+      props.addTodo(description, assigned);
+      setDescription("");
+      setAssigned("");
+    }
   };
 
   return (
@@ -43,7 +51,11 @@ function TodoFormState2() {
             onChange={onDescriptionChange}
           ></textarea>
         </div>
-        <button type="button" className="btn btn-primary mt-3">
+        <button
+          type="button"
+          className="btn btn-primary mt-3"
+          onClick={submitTodo}
+        >
           Add Todo
         </button>
       </form>
@@ -51,4 +63,4 @@ function TodoFormState2() {
   );
 }
 
-export default TodoFormState2;
+export default TodoFormStateSubmit3;
