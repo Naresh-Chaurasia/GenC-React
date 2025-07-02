@@ -7,6 +7,8 @@ import TodoFormState2 from "./components/TodoFormState2";
 import TodoFormStateSubmit3 from "./components/TodoFormStateSubmit3";
 
 function App() {
+  const [showAddTodoForm, setShowAddTodoForm] = useState(false);
+
   // Declare a state variable 'todos' and a function 'setTodos' to update it
   // useState - is a React Hook that lets you add state to functional components
   const [todos, setTodos] = useState([
@@ -71,7 +73,15 @@ function App() {
           {/* ######################################### */}
 
           {/* 1.4x-Step 4 Adding Form with State. What ever is typed in text box, it is displayed in console and also stored in state variable. */}
-          <TodoFormStateSubmit3 addTodo={addTodo} />
+          {/* <TodoFormStateSubmit3 addTodo={addTodo} /> */}
+
+          <button
+            onClick={() => setShowAddTodoForm(!showAddTodoForm)}
+            className="btn btn-primary"
+          >
+            {showAddTodoForm ? "Close New Todo" : "New Todo"}
+          </button>
+          {showAddTodoForm && <TodoFormStateSubmit3 addTodo={addTodo} />}
         </div>
       </div>
     </div>
