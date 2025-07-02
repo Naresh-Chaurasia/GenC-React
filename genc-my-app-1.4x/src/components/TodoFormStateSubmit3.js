@@ -19,6 +19,7 @@ function TodoFormStateSubmit3(props) {
 
   const submitTodo = () => {
     if (description !== "" && assigned !== "") {
+      console.log("description=" + description);
       props.addTodo(description, assigned);
       setDescription("");
       setAssigned("");

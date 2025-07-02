@@ -23,10 +23,16 @@ function App() {
   }, [todos]);
 
   const addTodo = (description, assigned) => {
+    // const newTodo = {
+    //   rowNumber: todos.length + 1,
+    //   rowDescription: "New Task",
+    //   rowAssigned: "Someone",
+    // };
+
     const newTodo = {
       rowNumber: todos.length + 1,
-      rowDescription: "New Task",
-      rowAssigned: "Someone",
+      rowDescription: description,
+      rowAssigned: assigned,
     };
     //Updates the state variable todos by adding a new item (newTodo) to the end of the existing list.
     setTodos([...todos, newTodo]);

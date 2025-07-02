@@ -10,6 +10,7 @@ function App() {
     { rowNumber: 11, rowDescription: "Feed Dog", rowAssigned: "NC" },
     { rowNumber: 21, rowDescription: "Feed Dog2", rowAssigned: "NC2" },
     { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
+    { rowNumber: 41, rowDescription: "Feed Dog 4", rowAssigned: "NC4" },
   ];
 
   return (
@@ -17,8 +18,8 @@ function App() {
       <div className="card">
         <div className="card-header">TODO 1.3x</div>
         <div className="card-body">
-          <TodoTable todos={todos} />
-          {/* <TodoTable2 todos={todos} /> */}
+          {/* <TodoTable todos={todos} /> */}
+          <TodoTable2 todos={todos} />
         </div>
       </div>
     </div>

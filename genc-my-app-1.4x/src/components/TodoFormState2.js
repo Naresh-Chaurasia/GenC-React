@@ -37,7 +37,7 @@ function TodoFormState2() {
           <label className="form-label">Description</label>
           <textarea
             className="form-control"
-            rows={3}
+            rows={5}
             required
             value={description}
             onChange={onDescriptionChange}
