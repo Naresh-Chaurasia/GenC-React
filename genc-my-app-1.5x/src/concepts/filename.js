@@ -1,7 +1,7 @@
 // Simulate a list of todos
 const todos = [
-    { rowNumber: 1, rowDescription: "Feed puppy", rowAssigned: "User One" },
-    { rowNumber: 2, rowDescription: "Water plants", rowAssigned: "User Two" },
+    { rowNumber: 1, rowDescription: "Feed puppy", rowAssigned: "User One" },//todo
+    { rowNumber: 2, rowDescription: "Water plants", rowAssigned: "User Two" },//todo
 ];
 
 // Function to delete a todo by rowNumber
