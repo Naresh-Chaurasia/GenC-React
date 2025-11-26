@@ -1,3 +1,5 @@
+
+// Only used for displaying data
 function TodoRowItem2(props) {
   return (
     <tr>

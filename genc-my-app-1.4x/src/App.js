@@ -22,18 +22,19 @@ function App() {
     console.log("Updated Todos:", todos);
   }, [todos]);
 
-  const addTodo = (description, assigned) => {
-    // const newTodo = {
-    //   rowNumber: todos.length + 1,
-    //   rowDescription: "New Task",
-    //   rowAssigned: "Someone",
-    // };
-
+  // addTodo without arguments
+  const addTodo = () => {
     const newTodo = {
       rowNumber: todos.length + 1,
-      rowDescription: description,
-      rowAssigned: assigned,
+      rowDescription: "New Task",
+      rowAssigned: "Someone",
     };
+
+    // const newTodo = {
+    //   rowNumber: todos.length + 1,
+    //   rowDescription: description,
+    //   rowAssigned: assigned,
+    // };
     //Updates the state variable todos by adding a new item (newTodo) to the end of the existing list.
     setTodos([...todos, newTodo]);
     console.log("New Todo Added:", todos);
@@ -45,6 +46,7 @@ function App() {
         <div className="card-header">TODO TodoFormStateButton3 Page</div>
         <div className="card-body">
           <TodoTable2 todos={todos} />
+
           {/* 1.4x-Step 1 Adding Buttons. It adds static row to the list of items */}
           {/* <button className="btn btn-primary" onClick={addTodo}>
             Add New Todo
@@ -52,7 +54,7 @@ function App() {
           {/* ######################################### */}
 
           {/* 1.4x-Step 2 Adding Form. What ever is typed in text box, it is displayed in console. */}
-          {/* <TodoFormOnChange1 setTodos={setTodos} /> */}
+          <TodoFormOnChange1 setTodos={setTodos} />
           {/* ######################################### */}
 
           {/* 1.4x-Step 3 Adding Form with State. What ever is typed in text box, it is displayed in console and also stored in state variable. */}
@@ -60,7 +62,7 @@ function App() {
           {/* ######################################### */}
 
           {/* 1.4x-Step 4 Adding Form with State. What ever is typed in text box, it is displayed in console and also stored in state variable. */}
-          <TodoFormStateSubmit3 addTodo={addTodo} />
+          {/* <TodoFormStateSubmit3 addTodo={addTodo} /> */}
         </div>
       </div>
     </div>

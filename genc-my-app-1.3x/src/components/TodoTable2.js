@@ -1,4 +1,3 @@
-import TodoRowItem1 from "./TodoRowItem1";
 import TodoRowItem2 from "./TodoRowItem2";
 
 function TodoTable2(props) {

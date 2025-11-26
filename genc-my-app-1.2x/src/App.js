@@ -5,9 +5,9 @@ import TodoRowItem2 from "./components/TodoRowItem2";
 
 function App() {
   const todos = [
-    { rowNumber: 11, rowDescription: "Feed Dog", rowAssigned: "NC" },
-    { rowNumber: 21, rowDescription: "Feed Dog2", rowAssigned: "NC2" },
-    { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
+    { rowNumber: 101, rowDescription: "The Courage to be Disliked by Ichiro Kishimi and Fumitake Koga", rowAssigned: "Naresh Chaurasia" },
+    { rowNumber: 201, rowDescription: "Feed Dog2", rowAssigned: "NC2" },
+    { rowNumber: 301, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
   ];
 
   return (
