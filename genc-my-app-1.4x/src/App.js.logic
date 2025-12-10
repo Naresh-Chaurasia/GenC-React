@@ -1,0 +1,37 @@
+function App() {
+  // Declare a state variable 'todos' and a function 'setTodos' to update it
+  // useState - is a React Hook that lets you add state to functional components
+  const [todos, setTodos] = useState([
+    { rowNumber: 11, rowDescription: "Feed Dog", rowAssigned: "NC" },
+    { rowNumber: 21, rowDescription: "Feed Dog2", rowAssigned: "NC2" },
+    { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
+  ]);
+
+  // addTodo without arguments
+  const addTodo = () => {
+    const newTodo = {
+      rowNumber: todos.length + 1,
+      rowDescription: "New Task",
+      rowAssigned: "Someone",
+    };
+
+    //Updates the state variable todos by adding a new item (newTodo) to the end of the existing list.
+    setTodos([...todos, newTodo]);
+    console.log("New Todo Added:", todos);
+  };
+
+  return (
+    <div className="mt-5 container">
+      <div className="card">
+        <div className="card-header">TODO TodoFormStateButton3 Page</div>
+        <div className="card-body">
+          <button className="btn btn-primary" onClick={addTodo}>
+            Add New Todo
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;

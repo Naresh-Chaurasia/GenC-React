@@ -5,6 +5,7 @@ import TodoTable2 from "./components/TodoTable2";
 import TodoFormOnChange1 from "./components/TodoFormOnChange1";
 import TodoFormState2 from "./components/TodoFormState2";
 import TodoFormStateSubmit3 from "./components/TodoFormStateSubmit3";
+import ExampleCounter1 from "./components/ExampleCounter1";
 
 function App() {
   // Declare a state variable 'todos' and a function 'setTodos' to update it
@@ -15,12 +16,13 @@ function App() {
     { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
   ]);
 
+
   // Log todos whenever they change
   // To display the updated todos after adding a new todo, use a useEffect hook to log todos whenever it changes. This is because setTodos is asynchronous, so logging right after setTodos will not show the updated value.
   // Add this code after your useState declaration:
-  useEffect(() => {
-    console.log("Updated Todos:", todos);
-  }, [todos]);
+  // useEffect(() => {
+  //   console.log("Updated Todos:", todos);
+  // }, [todos]);
 
   // addTodo without arguments
   const addTodo = () => {
@@ -36,6 +38,7 @@ function App() {
     //   rowAssigned: assigned,
     // };
     //Updates the state variable todos by adding a new item (newTodo) to the end of the existing list.
+    // Spread Operator
     setTodos([...todos, newTodo]);
     console.log("New Todo Added:", todos);
   };
@@ -45,16 +48,21 @@ function App() {
       <div className="card">
         <div className="card-header">TODO TodoFormStateButton3 Page</div>
         <div className="card-body">
-          <TodoTable2 todos={todos} />
+
+          {/* <ExampleCounter1 /> */}
+
+          {/* mean that I am passing argument to TodoTable2 with name todos1 and the value is todos */}
+          <TodoTable2 todos_arg={todos} />
 
           {/* 1.4x-Step 1 Adding Buttons. It adds static row to the list of items */}
+          {/* onClick, call the method addTodo */}
           {/* <button className="btn btn-primary" onClick={addTodo}>
             Add New Todo
           </button> */}
           {/* ######################################### */}
 
           {/* 1.4x-Step 2 Adding Form. What ever is typed in text box, it is displayed in console. */}
-          <TodoFormOnChange1 setTodos={setTodos} />
+          {/* <TodoFormOnChange1 setTodos={setTodos} /> */}
           {/* ######################################### */}
 
           {/* 1.4x-Step 3 Adding Form with State. What ever is typed in text box, it is displayed in console and also stored in state variable. */}

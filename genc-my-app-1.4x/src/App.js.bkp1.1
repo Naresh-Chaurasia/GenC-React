@@ -1,0 +1,28 @@
+import React, { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import TodoTable2 from "./components/TodoTable2";
+import TodoFormOnChange1 from "./components/TodoFormOnChange1";
+import TodoFormState2 from "./components/TodoFormState2";
+import TodoFormStateSubmit3 from "./components/TodoFormStateSubmit3";
+import ExampleCounter1 from "./components/ExampleCounter1";
+
+function App() {
+  // Declare a state variable 'todos' and a function 'setTodos' to update it
+  // useState - is a React Hook that lets you add state to functional components
+
+  return (
+    <div className="mt-5 container">
+      <div className="card">
+        <div className="card-header">TODO TodoFormStateButton3 Page</div>
+        <div className="card-body">
+
+          <ExampleCounter1 />
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;

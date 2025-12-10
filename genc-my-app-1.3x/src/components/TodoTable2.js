@@ -14,7 +14,7 @@ function TodoTable2(props) {
         {/* Map through the todos array to render a TodoRowItem2 for each todo */}
         {props.todos.map((todo, index) => (
           <TodoRowItem2
-            key={todo.rowNumber || index}  {/* Unique key for React's reconciliation, falls back to array index */}
+            key={todo.rowNumber || index}  {/* Unique key for React's reconciliation, falls back to array index */} 
             rowNumber={todo.rowNumber}     {/* Pass todo number to the row component */}
             rowDescription={todo.rowDescription}  {/* Pass todo description */}
             rowAssigned={todo.rowAssigned}        {/* Pass todo assignee */}

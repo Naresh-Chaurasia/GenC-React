@@ -12,7 +12,7 @@ function TodoTable2(props) {
         </tr>
       </thead>
       <tbody>
-        {props.todos.map((todo, index) => (
+        {props.todos_arg.map((todo, index) => (
           <TodoRowItem2
             key={todo.rowNumber || index}
             rowNumber={todo.rowNumber}
