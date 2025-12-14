@@ -12,7 +12,10 @@ export const App = () => {
   return (
     <div>
       <Navbar />
-      <HomePage />
+      <ExploreTopBooks />
+      <Carousel />
+      <Heros />
+      <LibraryServices />
       <Footer />
     </div>
   );
