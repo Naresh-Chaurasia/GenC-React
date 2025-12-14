@@ -10,6 +10,10 @@ import { HomePage } from "./layouts/HomePage/HomePage";
 
 export const App = () => {
   return (
-    <Navbar />
+    <div>
+      <Navbar />
+      <ExploreTopBooks />
+      <Carousel />
+    </div>
   );
 };

@@ -12,7 +12,7 @@ export const Carousel = () => {
                 d-none d-lg-block"
         data-bs-interval="false"
       >
-        {/* Desktop */}
+        {/* Desktop: Carousel with multiple items per slide, hidden on mobile (d-none d-lg-block) */}
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="row d-flex justify-content-center align-items-center">
@@ -62,7 +62,7 @@ export const Carousel = () => {
         </button>
       </div>
 
-      {/* Mobile */}
+      {/* Mobile: Single column layout, only visible on mobile (d-lg-none) */}
       <div className="d-lg-none mt-3">
         <div className="row d-flex justify-content-center align-items-center">
           <ReturnBook />
