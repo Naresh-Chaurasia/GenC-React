@@ -1,24 +1,19 @@
-// src/App.tsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { HomePageNav } from './examples/HomePageNav';
-import { AboutPageNav } from './examples/AboutPageNav';
 
+import UserFormRegister1 from "./reacthookforms/UserFormRegister1";
+import UserFormSubmit2 from "./reacthookforms/UserFormSubmit2";
+import UserFormSubmit3 from "./reacthookforms/UserFormSubmit3";
+import UserFormSubmit4 from "./reacthookforms/UserFormSubmit4";
 
 export const App = () => {
     return (
-        <Router>
-            <div style={{ padding: '20px' }}>
-                <nav style={{ marginBottom: '20px' }}>
-                    <Link to="/" style={{ marginRight: '10px' }}>Home</Link>
-                    <Link to="/about">About</Link>
-                </nav>
+        <div style={{ padding: "20px" }}>
+            <h1>React Hook Form Demo</h1>
 
-                <Routes>
-                    <Route path="/" element={<HomePageNav />} />
-                    <Route path="/about" element={<AboutPageNav />} />
-                </Routes>
-            </div>
-        </Router>
+            {/* Render the form component */}
+            {/* <UserFormRegister1 /> */}
+            {/* <UserFormSubmit2 /> */}
+            {/* <UserFormSubmit3 /> */}
+            <UserFormSubmit4 />
+        </div>
     );
-};
+}
