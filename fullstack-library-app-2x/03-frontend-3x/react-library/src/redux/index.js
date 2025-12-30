@@ -90,3 +90,10 @@ function decrement() {
     // Sends action object to Redux
     store.dispatch({ type: "DECREMENT" });
 }
+
+
+// store.dispatch({ type: "INCREMENT" }) / store.dispatch(action). This method belongs to the Redux store.
+
+// Store forwards action to reducer. currentState = reducer(currentState, action);
+// Redux already knows which reducer to use
+// You passed the reducer earlier when you created the store
