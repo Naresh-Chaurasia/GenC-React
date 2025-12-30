@@ -1,14 +1,16 @@
-import React from "react";
-import { UserContext } from "./appcontext/UserContext";
-import Dashboard from "./appcontext/Dashboard";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import Counter from './redux/features/counter/Counter';
 
 function App() {
-    const user = "Naresh";
-
     return (
-        <UserContext.Provider value={user}>
-            <Dashboard />
-        </UserContext.Provider>
+        <Provider store={store}>
+            <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+                <h1>Redux Counter Example</h1>
+                <Counter />
+            </div>
+        </Provider>
     );
 }
 
