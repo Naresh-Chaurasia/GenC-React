@@ -1,3 +1,19 @@
+// Button Click
+//    ↓
+// Action Creator
+//    ↓
+// dispatch(action)
+//    ↓
+// reducer
+//    ↓
+// new state
+//    ↓
+// subscribe()
+//    ↓
+// UI update
+
+
+
 // Get the Redux library from the browser window
 // Redux was loaded via CDN in index.html
 const redux = window.Redux;
