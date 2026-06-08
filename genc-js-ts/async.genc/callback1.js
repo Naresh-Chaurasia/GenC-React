@@ -6,6 +6,8 @@ function orderPizza(callback) {
     console.log('Pizza is ready!');
     callback(); // This is like the shop "calling you back"
   }, 2000);
+
+  console.log('Waiting for pizza...');
 }
 
 // This is the callback function:
