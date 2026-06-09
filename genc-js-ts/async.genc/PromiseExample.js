@@ -3,6 +3,11 @@ function orderPizza() {
     console.log("Ordering pizza...");
     setTimeout(() => {
       const success = true; // Change to false to test error
+      
+      //logic to make pizza and determine success or failure
+      // Pizza base not there, then return false
+      
+      
       if (success) {
         resolve("Your pizza is here! 🍕");
       } else {
