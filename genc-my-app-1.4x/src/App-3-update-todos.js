@@ -3,7 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import ExampleCounter1 from "./components/ExampleCounter1";
 import TodoTable2 from "./components/TodoTable2";
-import TodoFormOnChange1 from "./components/TodoFormOnChange1";
 
 function App() {
 
@@ -41,9 +40,13 @@ function App() {
           {/* mean that I am passing argument to TodoTable2 with name todos1 and the value is todos */}
           <TodoTable2 todos_arg={todos} /> 
 
-          {/* Adding Form. What ever is typed in text box, it is displayed in console. */}
-          <TodoFormOnChange1 setTodos={setTodos} />
-          {/* ######################################### */}
+           {/* onClick, call the method addTodo */}
+          <button className="btn btn-primary" onClick={addTodo}>
+            Add Todo1
+          </button>
+
+          <br/>
+          <br/>
 
 
         </div>
