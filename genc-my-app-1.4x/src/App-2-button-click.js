@@ -6,28 +6,28 @@ import TodoTable2 from "./components/TodoTable2";
 
 function App() {
 
-  // Declare a state variable 'todos' and a function 'setTodos' to update it
-  // useState - is a React Hook that lets you add state to functional components
-  const [todos, setTodos] = useState([
-    { rowNumber: 11, rowDescription: "Feed Dog", rowAssigned: "NC" },
-    { rowNumber: 21, rowDescription: "Feed Dog2", rowAssigned: "NC2" },
-    { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
-  ]);
+  const todos = [
+    // Each item is an object with 3 key-value pairs
+    { rowNumber: 11, rowDescription: "Feed Dog", rowAssigned: "NC" },   // Task 1
+    { rowNumber: 21, rowDescription: "Feed Dog2", rowAssigned: "NC2" }, // Task 2
+    { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" }, // Task 3
+    { rowNumber: 41, rowDescription: "Feed Dog 4", rowAssigned: "NC4" } // Task 4
+  ];
 
     // addTodo without arguments
-  const addTodo = () => {
+  const addTodo1 = () => {
+    console.log("Hello...");
+  }
+
+  const addTodo2 = () => {
     const newTodo = {
       rowNumber: todos.length + 1,
       rowDescription: "New Task",
       rowAssigned: "Someone",
     };
-
-    //Updates the state variable todos by adding a new item (newTodo) to the end of the existing list.
-    // Spread Operator
-    setTodos([...todos, newTodo]);
+    todos.push(newTodo);
     console.log("New Todo Added:", todos);
-  };
-
+  }
 
   return (
     <div className="mt-5 container">
@@ -41,13 +41,16 @@ function App() {
           <TodoTable2 todos_arg={todos} /> 
 
            {/* onClick, call the method addTodo */}
-          <button className="btn btn-primary" onClick={addTodo}>
+          <button className="btn btn-primary" onClick={addTodo1}>
             Add Todo1
           </button>
 
           <br/>
           <br/>
 
+          <button className="btn btn-primary" onClick={addTodo2}>
+            Add Todo2
+          </button>
 
         </div>
       </div>
