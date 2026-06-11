@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import ExampleCounter1 from "./components/ExampleCounter1";
-import TodoFormOnChange1 from "./components/TodoFormOnChange1";
 import TodoTable2 from "./components/TodoTable2";
-import TodoFormSaveState2 from "./components/TodoFormSaveState2";
+import TodoFormOnChange1 from "./components/TodoFormOnChange1";
 
 function App() {
 
@@ -42,8 +41,10 @@ function App() {
           {/* mean that I am passing argument to TodoTable2 with name todos1 and the value is todos */}
           <TodoTable2 todos_arg={todos} /> 
 
+          {/* Adding Form. What ever is typed in text box, it is displayed in console. */}
+          <TodoFormOnChange1 setTodos={setTodos} />
+          {/* ######################################### */}
 
-          <TodoFormSaveState2 />
 
         </div>
       </div>

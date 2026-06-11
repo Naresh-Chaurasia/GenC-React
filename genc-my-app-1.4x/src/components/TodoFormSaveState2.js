@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TodoFormState2() {
+function TodoFormSaveState2() {
   // State for assigned and description fields
   const [assigned, setAssigned] = useState("");
   const [description, setDescription] = useState("");
@@ -27,6 +27,11 @@ function TodoFormState2() {
             className="form-control"
             required
             value={assigned}
+            // Inline function
+            // React creates this function right here inside the JSX.
+            // When the user types, this function executes immediately.
+            // Good for very short logic, but can make JSX harder to read
+            // if the logic becomes large.
             onChange={(event) => {
               setAssigned(event.target.value);
               console.log("Assigned typed:", event.target.value);
@@ -40,6 +45,11 @@ function TodoFormState2() {
             rows={5}
             required
             value={description}
+            // Reference to a separate function.
+            // React will call the existing function named
+            // onDescriptionChange whenever the value changes.
+            // Keeps JSX cleaner and allows the function to be
+            // reused elsewhere if needed.
             onChange={onDescriptionChange}
           ></textarea>
         </div>
@@ -51,4 +61,4 @@ function TodoFormState2() {
   );
 }
 
-export default TodoFormState2;
+export default TodoFormSaveState2;
