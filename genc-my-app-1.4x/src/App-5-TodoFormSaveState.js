@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import TodoTable2 from "./components/TodoTable2";
-import TodoFormOnChange1 from "./components/TodoFormOnChange1";
-import TodoFormStateSubmit3 from "./components/TodoFormStateSubmit3";
 import ExampleCounter1 from "./components/ExampleCounter1";
+import TodoFormOnChange1 from "./components/TodoFormOnChange1";
+import TodoTable2 from "./components/TodoTable2";
+import TodoFormSaveState2 from "./components/TodoFormSaveState2";
 
 function App() {
+
   // Declare a state variable 'todos' and a function 'setTodos' to update it
   // useState - is a React Hook that lets you add state to functional components
   const [todos, setTodos] = useState([
@@ -15,26 +16,20 @@ function App() {
     { rowNumber: 31, rowDescription: "Feed Dog3", rowAssigned: "NC3" },
   ]);
 
-
-  // Log todos whenever they change
-  // To display the updated todos after adding a new todo, use a useEffect hook to log todos whenever it changes. This is because setTodos is asynchronous, so logging right after setTodos will not show the updated value.
-  // Add this code after your useState declaration:
-  // useEffect(() => {
-  //   console.log("Updated Todos:", todos);
-  // }, [todos]);
-
-  // addTodo with arguments
-  const addTodo = (description, assigned) => {
+    // addTodo without arguments
+  const addTodo = () => {
     const newTodo = {
       rowNumber: todos.length + 1,
-      rowDescription: description,
-      rowAssigned: assigned,
+      rowDescription: "New Task",
+      rowAssigned: "Someone",
     };
+
     //Updates the state variable todos by adding a new item (newTodo) to the end of the existing list.
     // Spread Operator
     setTodos([...todos, newTodo]);
     console.log("New Todo Added:", todos);
   };
+
 
   return (
     <div className="mt-5 container">
@@ -42,17 +37,19 @@ function App() {
         <div className="card-header">TODO TodoFormStateButton3 Page</div>
         <div className="card-body">
 
-          {/* <ExampleCounter1 /> */}
+          <ExampleCounter1 />
 
           {/* mean that I am passing argument to TodoTable2 with name todos1 and the value is todos */}
-          <TodoTable2 todos_arg={todos} />
+          <TodoTable2 todos_arg={todos} /> 
 
-          {/* 1.4x-Step 4 Adding Form with State. What ever is typed in text box, it is displayed in console and also stored in state variable. */}
-          <TodoFormStateSubmit3 addTodo={addTodo} />
+
+          <TodoFormSaveState2 />
+
         </div>
       </div>
     </div>
   );
 }
+
 
 export default App;
